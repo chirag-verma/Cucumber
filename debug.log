@@ -587,3 +587,8 @@
 [0810/180219.320:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0810/180219.320:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0810/180219.320:ERROR:exception_snapshot_win.cc(98)] thread ID 49088 not found in process
+[0812/185022.928:ERROR:process_info.cc(359)] UncheckedAllocate
+[0812/185023.669:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir55392_889585731\Crashpad\reports\838c4646-1682-4e67-b78e-7ac2df3791ff.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0812/185105.468:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir52804_2103646039\Crashpad\reports\835e4143-65eb-466c-8e2f-1be8a9b6809d.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0812/185326.027:ERROR:process_info.cc(359)] UncheckedAllocate
+[0812/191005.198:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir45632_816774908\Crashpad\reports\b1a5cf21-361a-4e67-86a6-70af609f86e3.dmp: The process cannot access the file because it is being used by another process. (0x20)

@@ -37,124 +37,317 @@ public class Util {
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("PegaGadget2Ifr");
+
 		driver.findElements(By.xpath("//span[text()='Upload Vital Records']")).get(0).click();
 		Thread.sleep(4000);
 
 		List<WebElement> ls1 = driver.findElements(
 				By.xpath("//span[text()='The Rating Committee Package was uploaded']//following::label[text()='Yes']"));
 
-		for (int i = 0; i < ls1.size(); i++) {
-			while (limit < 10) {
+		for (int j = 0; j < ls1.size(); j++) {
+
+			while (limit < 5) {
 
 				try {
-					ls1.get(i).click();
+					ls1.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls1.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls1.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
 		List<WebElement> ls2 = driver.findElements(
 				By.xpath("//span[text()='Rating Recommendation included in the RCP']//following::label[text()='Yes']"));
 
-		for (int i = 0; i < ls2.size(); i++) {
-			while (limit < 10) {
+		for (int j = 0; j < ls2.size(); j++) {
+
+			while (limit < 5) {
 
 				try {
-					ls2.get(i).click();
+					ls2.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls2.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls2.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
 		List<WebElement> ls3 = driver.findElements(
 				By.xpath("//span[contains(text(),'All Rating Committee participa')]//following::label[text()='Yes']"));
 
-		for (int i = 0; i < ls3.size(); i++) {
+		for (int j = 0; j < ls3.size(); j++) {
 
-			while (limit < 10) {
+			while (limit < 5) {
 
 				try {
-					ls3.get(i).click();
+					ls3.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls3.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls3.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
 		List<WebElement> ls4 = driver.findElements(By.xpath(
 				"//span[contains(text(),'Methodology Rating Group approval email')]//following::label[text()='Yes']"));
 
-		for (int i1 = 0; i1 < ls4.size(); i1++) {
+		for (int j = 0; j < ls4.size(); j++) {
 
-			while (limit < 10) {
+			while (limit < 5) {
 
 				try {
-					ls4.get(i1).click();
+					ls4.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls4.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls4.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
 		List<WebElement> ls5 = driver.findElements(By.xpath(
 				"//span[text()='Rating Committee Chair eligible to chair per RPO RC Chair Approval list ']//following::label[text()='Yes']"));
 
-		for (int i1 = 0; i1 < ls5.size(); i1++) {
+		for (int j = 0; j < ls5.size(); j++) {
 
-			while (limit < 3) {
+			while (limit < 5) {
 
 				try {
-					ls5.get(i1).click();
+					ls5.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls5.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls5.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
@@ -163,22 +356,63 @@ public class Util {
 
 		for (int j = 0; j < ls6.size(); j++) {
 
-			while (limit < 3) {
+			while (limit < 5) {
 
 				try {
 					ls6.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
+			}
+
+			j++;
+
+			if (j == ls6.size() - 1) {
+				break;
 			}
 
 		}
 
+		for (int j = 1; j < ls6.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls6.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
+
+		}
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
@@ -187,22 +421,59 @@ public class Util {
 
 		for (int j = 0; j < ls7.size(); j++) {
 
-			while (limit < 3) {
+			while (limit < 5) {
 
 				try {
 					ls7.get(j).click();
+
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
 
+			j++;
+
 		}
 
+		for (int j = 1; j < ls7.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls7.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
+
+		}
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+				break;
+			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
 
 		Thread.sleep(2000);
 
@@ -218,15 +489,47 @@ public class Util {
 
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
+			}
+
+			j++;
+			if (j == ls8.size() - 1) {
+				break;
+			}
+
+		}
+
+		for (int j = 1; j < ls8.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls8.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
+			if (j == ls8.size() - 1) {
+				break;
 			}
 
 		}
 
 		Thread.sleep(2000);
-		
+
 		while (limit < 10) {
 
 			try {
@@ -234,28 +537,55 @@ public class Util {
 
 				break;
 			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
 				// TODO Auto-generated catch block
 				continue;
 			}
 		}
-
 
 		List<WebElement> ls9 = driver.findElements(By.xpath(
 				"//span[contains(text(),'Final Rating Committee Outcome as noted in the Addendum Vote Tally is same as Press Release,')]//following::label[text()='Yes']"));
 
 		for (int j = 0; j < ls9.size(); j++) {
 
-			while (limit < 10) {
+			while (limit < 5) {
 
 				try {
 					ls9.get(j).click();
 
 					break;
 				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
 					// TODO Auto-generated catch block
 					continue;
+
 				}
 			}
+
+			j++;
+
+		}
+
+		for (int j = 1; j < ls9.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls9.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					// TODO Auto-generated catch block
+					continue;
+
+				}
+			}
+
+			j++;
 
 		}
 
@@ -268,12 +598,13 @@ public class Util {
 
 				break;
 			} catch (Exception e) {
+				driver.navigate().refresh();
+				Thread.sleep(5000);
 				// TODO Auto-generated catch block
 				continue;
 			}
 		}
 
 		Thread.sleep(6000);
-
 	}
 }
