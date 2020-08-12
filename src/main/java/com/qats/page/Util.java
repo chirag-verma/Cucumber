@@ -5,12 +5,13 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Util {
 
 	WebDriver driver;
+
+	Boolean result = false;
+	int limit = 0;
 
 	public Util(WebDriver Driver) {
 		this.driver = Driver;
@@ -43,8 +44,16 @@ public class Util {
 				By.xpath("//span[text()='The Rating Committee Package was uploaded']//following::label[text()='Yes']"));
 
 		for (int i = 0; i < ls1.size(); i++) {
+			while (limit < 10) {
 
-			ls1.get(i).click();
+				try {
+					ls1.get(i).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -58,8 +67,16 @@ public class Util {
 				By.xpath("//span[text()='Rating Recommendation included in the RCP']//following::label[text()='Yes']"));
 
 		for (int i = 0; i < ls2.size(); i++) {
+			while (limit < 10) {
 
-			ls2.get(i).click();
+				try {
+					ls2.get(i).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -74,7 +91,16 @@ public class Util {
 
 		for (int i = 0; i < ls3.size(); i++) {
 
-			ls3.get(i).click();
+			while (limit < 10) {
+
+				try {
+					ls3.get(i).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -89,7 +115,16 @@ public class Util {
 
 		for (int i1 = 0; i1 < ls4.size(); i1++) {
 
-			ls4.get(i1).click();
+			while (limit < 10) {
+
+				try {
+					ls4.get(i1).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -104,7 +139,16 @@ public class Util {
 
 		for (int i1 = 0; i1 < ls5.size(); i1++) {
 
-			ls5.get(i1).click();
+			while (limit < 3) {
+
+				try {
+					ls5.get(i1).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -119,7 +163,16 @@ public class Util {
 
 		for (int j = 0; j < ls6.size(); j++) {
 
-			ls6.get(j).click();
+			while (limit < 3) {
+
+				try {
+					ls6.get(j).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
 
 		}
 
@@ -134,8 +187,90 @@ public class Util {
 
 		for (int j = 0; j < ls7.size(); j++) {
 
-			ls7.get(j).click();
+			while (limit < 3) {
 
+				try {
+					ls7.get(j).click();
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
+
+		}
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//button[text()='Continue']")).click();
+
+		Thread.sleep(2000);
+
+		List<WebElement> ls8 = driver.findElements(By.xpath(
+				"//span[contains(text(),'actual Elements and Data Sources are present and complete in')]//following::label[text()='Yes']"));
+
+		for (int j = 0; j < ls8.size(); j++) {
+
+			while (limit < 5) {
+
+				try {
+					ls8.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
+
+		}
+
+		Thread.sleep(2000);
+		
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Continue']")).click();
+
+				break;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				continue;
+			}
+		}
+
+
+		List<WebElement> ls9 = driver.findElements(By.xpath(
+				"//span[contains(text(),'Final Rating Committee Outcome as noted in the Addendum Vote Tally is same as Press Release,')]//following::label[text()='Yes']"));
+
+		for (int j = 0; j < ls9.size(); j++) {
+
+			while (limit < 10) {
+
+				try {
+					ls9.get(j).click();
+
+					break;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					continue;
+				}
+			}
+
+		}
+
+		Thread.sleep(2000);
+
+		while (limit < 10) {
+
+			try {
+				driver.findElement(By.xpath("//button[text()='Complete Review']")).click();
+
+				break;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				continue;
+			}
 		}
 
 		Thread.sleep(6000);

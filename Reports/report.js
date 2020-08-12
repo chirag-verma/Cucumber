@@ -96,10 +96,3 @@ formatter.step({
 formatter.match({
   "location": "Step.After_Completing_the_Questionnaire_Click_on_Submit_Review()"
 });
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-});
