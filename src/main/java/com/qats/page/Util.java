@@ -55,34 +55,15 @@ public class Util {
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls1.clear();
+					ls1 = driver.findElements(By.xpath(
+							"//span[text()='The Rating Committee Package was uploaded']//following::label[text()='Yes']"));
+
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls1.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls1.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
@@ -115,36 +96,21 @@ public class Util {
 
 					break;
 				} catch (Exception e) {
-					driver.navigate().refresh();
+					driver.findElement(By.xpath("//button[text()='Back']")).click();
+
 					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
+
+					driver.findElement(By.xpath("//button[text()='Continue']")).click();
+
+					Thread.sleep(3000);
+					ls2.clear();
+					ls2 = driver.findElements(By.xpath(
+							"//span[contains(text(),'actual Elements and Data Sources are present and complete in')]//following::label[text()='Yes']"));
+				
+					Thread.sleep(4000);
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls2.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls2.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
@@ -178,35 +144,16 @@ public class Util {
 					break;
 				} catch (Exception e) {
 					driver.navigate().refresh();
+
 					Thread.sleep(5000);
+					ls3.clear();
+					ls3 = driver.findElements(By.xpath(
+							"//span[contains(text(),'All Rating Committee participa')]//following::label[text()='Yes']"));
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls3.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls3.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
@@ -241,34 +188,15 @@ public class Util {
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls4.clear();
+					ls4 = driver.findElements(By.xpath(
+							"//span[contains(text(),'Methodology Rating Group approval email')]//following::label[text()='Yes']"));
+
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls4.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls4.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
@@ -303,34 +231,14 @@ public class Util {
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls5.clear();
+					ls5 = driver.findElements(By.xpath(
+							"//span[text()='Rating Committee Chair eligible to chair per RPO RC Chair Approval list ']//following::label[text()='Yes']"));
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls5.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls5.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
@@ -365,40 +273,18 @@ public class Util {
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls6.clear();
+					ls6 = driver.findElements(By.xpath(
+							"//span[contains(text(),'Is the Lead Analyst correctly reflected and any differences from RCP')]//following::label[text()='Yes']"));
+
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
 
-			j++;
-
-			if (j == ls6.size() - 1) {
-				break;
-			}
-
 		}
 
-		for (int j = 1; j < ls6.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls6.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
-
-		}
 		Thread.sleep(2000);
 
 		while (limit < 10) {
@@ -419,47 +305,30 @@ public class Util {
 		List<WebElement> ls7 = driver.findElements(By.xpath(
 				"//span[contains(text(),'eader and footer is unobstructed on Draft Press Release (PR) and attached to')]//following::label[text()='Yes']"));
 
-		for (int j = 0; j < ls7.size(); j++) {
+		for (int j1 = 0; j1 < ls7.size(); j1++) {
 
 			while (limit < 5) {
 
 				try {
-					ls7.get(j).click();
+					ls7.get(j1).click();
 
 					break;
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls7.clear();
+					ls7 = driver.findElements(By.xpath(
+							"//span[contains(text(),'eader and footer is unobstructed on Draft Press Release (PR) and attached to')]//following::label[text()='Yes']"));
+					ls7.get(j1).click();
+					Thread.sleep(4000);
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
 
-			j++;
-
 		}
 
-		for (int j = 1; j < ls7.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls7.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
-
-		}
 		Thread.sleep(2000);
 
 		while (limit < 10) {
@@ -480,50 +349,32 @@ public class Util {
 		List<WebElement> ls8 = driver.findElements(By.xpath(
 				"//span[contains(text(),'actual Elements and Data Sources are present and complete in')]//following::label[text()='Yes']"));
 
-		for (int j = 0; j < ls8.size(); j++) {
+		for (int j2 = 0; j2 < ls8.size(); j2++) {
 
 			while (limit < 5) {
 
 				try {
-					ls8.get(j).click();
+
+					ls8.get(j2).click();
 
 					break;
 				} catch (Exception e) {
-					driver.navigate().refresh();
+					driver.findElement(By.xpath("//button[text()='Back']")).click();
+
 					Thread.sleep(5000);
+
+					driver.findElement(By.xpath("//button[text()='Continue']")).click();
+
+					Thread.sleep(3000);
+					ls8.clear();
+					ls8 = driver.findElements(By.xpath(
+							"//span[contains(text(),'actual Elements and Data Sources are present and complete in')]//following::label[text()='Yes']"));
+				
+					Thread.sleep(4000);
 					// TODO Auto-generated catch block
-					continue;
+					
 
 				}
-			}
-
-			j++;
-			if (j == ls8.size() - 1) {
-				break;
-			}
-
-		}
-
-		for (int j = 1; j < ls8.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls8.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
-			if (j == ls8.size() - 1) {
-				break;
 			}
 
 		}
@@ -558,34 +409,15 @@ public class Util {
 				} catch (Exception e) {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
+					ls9.clear();
+					ls9 = driver.findElements(By.xpath(
+							"//span[contains(text(),'Final Rating Committee Outcome as noted in the Addendum Vote Tally is same as Press Release,')]//following::label[text()='Yes']"));
+
 					// TODO Auto-generated catch block
 					continue;
 
 				}
 			}
-
-			j++;
-
-		}
-
-		for (int j = 1; j < ls9.size(); j++) {
-
-			while (limit < 5) {
-
-				try {
-					ls9.get(j).click();
-
-					break;
-				} catch (Exception e) {
-					driver.navigate().refresh();
-					Thread.sleep(5000);
-					// TODO Auto-generated catch block
-					continue;
-
-				}
-			}
-
-			j++;
 
 		}
 
