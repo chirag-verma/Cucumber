@@ -113,7 +113,6 @@ public class Step {
 		homepage.clickonDashboard();
 		Thread.sleep(3000);
 
-		Thread.sleep(3000);
 	}
 
 	@Then("Assign newly created cases to Reviewer")
@@ -122,15 +121,15 @@ public class Step {
 		driver.switchTo().frame(1);
 		Thread.sleep(2000);
 		Actions act = new Actions(driver);
-		
 
-		Thread.sleep(4000);
+		act.moveToElement(driver.findElement(By.xpath("//span[text()='QualityReview']"))).doubleClick().build()
+				.perform();
+		Thread.sleep(2000);
 		System.out.println(driver.findElements(By.xpath("//img[@src='webwb/px-explorer-drag-icon.png']")).size());
 		
-		Thread.sleep(3000);
-		Actions act1=act.clickAndHold(driver.findElements(By.xpath("//img[@src='webwb/px-explorer-drag-icon.png']")).get(2)).moveToElement(driver.findElements(By.xpath("//*[@id='TestAdmin_qats']")).get(0));
-				Thread.sleep(2000);
-				act1.release().build().perform();
+		act.clickAndHold(driver.findElement(By.xpath("//img[@src='webwb/px-explorer-drag-icon.png']"))).moveToElement(driver.findElement(By.xpath("//span[@data-name='QATS User']"))).build()
+		.perform();
+
 		Thread.sleep(5000);
 
 	}
@@ -146,7 +145,7 @@ public class Step {
 	public void on_Selecting_a_Review_Case() throws InterruptedException {
 		driver.switchTo().frame(1);
 		driver.findElements(By.xpath("//h1[text()='My Work']/following::td[@data-attribute-name='QRS ID']/div/span/a"))
-				.get(0).click();
+				.get(14).click();
 		Thread.sleep(6000);
 	}
 

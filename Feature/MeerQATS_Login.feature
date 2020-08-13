@@ -16,6 +16,8 @@ When User enter the the MeerQATS login page
 And After Verifying login page title
 And User enters Username and Password and click login
 Then User enter MeerQATS HomePage
+When User Clicks Create QA Review
+And After selecting two review cases and click on Create Case
 Then Go to Dashboard
 And Assign newly created cases to Reviewer
 

@@ -595,3 +595,6 @@
 [0812/210844.585:ERROR:process_info.cc(359)] UncheckedAllocate
 [0812/213103.782:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir56292_966720325\Crashpad\reports\d676474c-9d6f-476d-be61-3ea18b5112c1.dmp: The process cannot access the file because it is being used by another process. (0x20)
 [0812/213157.427:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir42760_1601252459\Crashpad\reports\0712cd2a-0fcf-45eb-a38c-db65cd5f2457.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0813/142847.794:ERROR:process_info.cc(359)] UncheckedAllocate
+[0813/142848.023:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir6256_816205589\Crashpad\reports\99bde590-4df8-49a6-bfc5-c9df61bfa521.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0813/175748.961:ERROR:filesystem_win.cc(148)] DeleteFile D:\Users\VermaC\AppData\Local\Temp\1\scoped_dir29168_1400664207\Crashpad\reports\43147a80-ee8d-4d29-b1e3-7ad36e2750ee.dmp: The process cannot access the file because it is being used by another process. (0x20)
